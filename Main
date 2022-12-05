@@ -1,0 +1,65 @@
+
+
+
+interface Item{
+    String getName();
+}
+
+abstract class Shape implements Item {
+    public abstract String getName();
+}
+
+class Circle extends Shape{
+
+    private static final String name = "Circle";
+    public String getName() {
+        return name;
+    }
+}
+class Pyramid extends Shape{
+
+    private static final String name = "Pyramid";
+    public String getName() {
+        return name;
+    }
+}
+class Quad extends Shape{
+
+    private static final String name = "Quad";
+    public String getName() {
+        return name;
+    }
+}
+class Triangle extends Shape{
+
+    private static final String name = "Triangle";
+    public String getName() {
+        return name;
+    }
+}
+class Sphere extends Shape{
+
+    private static final String name = "Sphere";
+    public String getName() {
+        return name;
+    }
+}
+
+class NamePrinter{
+    private final Shape shape;
+    public NamePrinter(Shape shape){
+        this.shape = shape;
+    }
+    public void printName(){
+        System.out.println(shape.getName());
+    }
+}
+
+public class MainClass{
+    public static void main(String args[]){
+        Circle circle = new Circle();
+        NamePrinter namePrinter = new NamePrinter(circle);
+        namePrinter.printName();
+
+    }
+}
